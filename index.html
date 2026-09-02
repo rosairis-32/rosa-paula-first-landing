@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.I. FOR DESIGNERS — Rosa I Paula</title>
+
+<style>
+:root{
+    --bg: #A8B4A2;          /* Muted Eucalyptus */
+    --bg-dark: #9CA996;
+    --text: #ffffff;
+    --bow: #EDE5D8;         /* Soft warm beige */
+    --line: rgba(255,255,255,0.22);
+    --frame: rgba(255,255,255,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    min-height:100%;
+}
+
+body{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size:14pt;
+    color:var(--text);
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,255,255,0.08),
+        transparent 40%),
+        linear-gradient(
+        180deg,
+        var(--bg),
+        var(--bg-dark));
+    position:relative;
+    overflow-x:hidden;
+
+    /* Invisible luxury frame */
+    box-shadow: inset 0 0 0 14px var(--frame);
+}
+
+/* Bow pattern */
+.pattern{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.12;
+    z-index:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg stroke='%23EDE5D8' stroke-width='2' fill='none'%3E%3Cpath d='M110 110 C82 82 48 72 36 94 C28 110 44 124 76 118 L110 110Z'/%3E%3Cpath d='M110 110 C138 82 172 72 184 94 C192 110 176 124 144 118 L110 110Z'/%3E%3Cline x1='102' y1='110' x2='118' y2='110'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:220px 220px;
+}
+
+/* Diamond sparkles */
+.sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.sparkles::before,
+.sparkles::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.9) 0 1px, transparent 2px),
+        radial-gradient(circle, rgba(255,248,230,.8) 0 1px, transparent 2px);
+    background-size:170px 170px, 240px 240px;
+    opacity:.25;
+    animation: shimmer 12s ease-in-out infinite alternate;
+}
+
+.sparkles::after{
+    animation-duration:18s;
+    opacity:.18;
+}
+
+@keyframes shimmer{
+    from{
+        transform:translateY(0);
+        filter:brightness(1);
+    }
+    to{
+        transform:translateY(-10px);
+        filter:brightness(1.3);
+    }
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    width:min(920px, 86%);
+    margin:0 auto;
+    padding:6rem 0 5rem;
+}
+
+h1{
+    font-size:clamp(2.3rem, 6vw, 5rem);
+    font-weight:400;
+    line-height:1.05;
+    letter-spacing:.03em;
+    margin-bottom:1.5rem;
+}
+
+.course{
+    margin-bottom:1.25rem;
+    opacity:.95;
+}
+
+.email{
+    margin-bottom:5rem;
+}
+
+.email a{
+    color:var(--text);
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.4);
+}
+
+.email a:hover{
+    border-bottom-color:rgba(255,255,255,.9);
+}
+
+.work-title{
+    font-size:.9rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-bottom:1rem;
+}
+
+.work-list{
+    list-style:none;
+    border-top:1px solid var(--line);
+}
+
+.work-list li{
+    border-bottom:1px solid var(--line);
+}
+
+.work-list a{
+    color:var(--text);
+    text-decoration:none;
+    display:grid;
+    grid-template-columns:60px 1fr;
+    gap:1rem;
+    padding:1.3rem 0;
+    transition:opacity .25s ease;
+}
+
+.work-list a:hover{
+    opacity:.8;
+}
+
+.number{
+    opacity:.75;
+}
+
+@media (max-width:700px){
+
+    .container{
+        width:90%;
+        padding-top:4rem;
+    }
+
+    h1{
+        line-height:1.1;
+    }
+
+    .email{
+        margin-bottom:3rem;
+    }
+
+    .work-list a{
+        grid-template-columns:45px 1fr;
+        gap:.5rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="pattern"></div>
+<div class="sparkles"></div>
+
+<main class="container">
+
+    <h1>A.I. FOR DESIGNERS — Rosa I Paula</h1>
+
+    <div class="course">ART 3041 · Fall 2026</div>
+
+    <div class="email">
+        <a href="mailto:rosa.paula41@login.cuny.edu">
+            rosa.paula41@login.cuny.edu
+        </a>
+    </div>
+
+    <div class="work-title">Work</div>
+
+    <ol class="work-list">
+
+        <li>
+            #
+                <span class="number">01</span>
+                <span>Custom Instructions</span>
+            </a>
+        </li>
+
+        <li>
+            #
+                <span class="number">02</span>
+                <span>A Style Guide for Your AI</span>
+            </a>
+        </li>
+
+        <li>
+            #
+                <span class="number">03</span>
+                <span>Design a ___</span>
+            </a>
+        </li>
+
+        <li>
+            #
+                <span class="number">04</span>
+                <span>Commute Story</span>
+            </a>
+        </li>
+
+        <li>
+            #
+                <span class="number">05</span>
+                <span>Become a Crea(i)tive Director</span>
+            </a>
+        </li>
+
+        <li>
+            #
+                <span class="number">06</span>
+                <span>Experimental AI Interface</span>
+            </a>
+        </li>
+
+        <li>
+            #
+                <span class="number">07</span>
+                <span>Open</span>
+            </a>
+        </li>
+
+    </ol>
+
+</main>
+
+<script>
+// Reserved for future semester projects.
+</script>
+
+</body>
+</html>
